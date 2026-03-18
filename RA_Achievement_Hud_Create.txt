@@ -1,0 +1,5 @@
+global.achievposx = 20;
+global.achievposy = -50;
+global.currentachievtitle = "Something went wrong";
+global.currentachievtext = "How are you seeing this?";
+global.achieved = 0;

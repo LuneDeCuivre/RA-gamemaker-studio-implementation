@@ -1,0 +1,15 @@
+if (global.achieved == 1)
+{
+    global.achieved = 0;
+    alarm[0] = 90;
+}
+
+if (alarm[0] != -1)
+{
+    if (global.achievposy < 20)
+        global.achievposy = global.achievposy + 2;
+}
+else if (global.achievposy > -50)
+{
+    global.achievposy = global.achievposy - 2;
+}

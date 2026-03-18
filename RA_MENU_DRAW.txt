@@ -1,0 +1,40 @@
+scr_setfont(fnt_maintext);
+draw_set_halign(fa_center);
+draw_set_color(c_white);
+
+if (global.hardcore == 1)
+    draw_text_transformed(320, 400, "< Hardcore Mode >", 2, 2, 0);
+else
+    draw_text_transformed(320, 400, "< Softcore Mode >", 2, 2, 0);
+
+if (Select == 0)
+{
+    draw_text_transformed(320, 30, "Enter your RetroAchievements username.", 2, 2, 0);
+    draw_set_color(c_gray);
+    draw_text_transformed(320, 240, "Enter your RetroAchievements password.", 2, 2, 0);
+}
+
+if (Select == 1)
+{
+    draw_text_transformed(320, 240, "Enter your RetroAchievements password.", 2, 2, 0);
+    draw_set_color(c_gray);
+    draw_text_transformed(320, 30, "Enter your RetroAchievements username.", 2, 2, 0);
+}
+
+draw_text_transformed(320, 460, "Press ENTER to connect.", 1, 1, 0);
+
+if (connect == 1)
+    draw_text(320, 440, "Connecting... Please wait.");
+
+if (connection_error == 1)
+    draw_text(320, 440, ds_map_find_value(resultmap, "Error"));
+
+draw_set_halign(fa_left);
+draw_set_color(c_yellow);
+draw_text_transformed(70, 130, username, 2, 2, 0);
+temp_password = "";
+
+for (var i = 0; i < string_length(password); i += 1)
+    temp_password += "*";
+
+draw_text_transformed(70, 350, temp_password, 2, 2, 0);

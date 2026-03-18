@@ -1,0 +1,9 @@
+if (ds_list_find_index(global.UnlockList, achievid) == -1 || achievid == 0)
+{
+    ds_list_add(global.UnlockList, achievid);
+    global.currentachievtitle = achievtitle;
+    global.currentachievtext = achievtext;
+    global.v = md5_string_utf8(string(achievid) + global.user + "1");
+    achunlock = http_request("https://stage.retroachievements.org/dorequest.php?r=awardachievement&u=" + global.user + "&t=" + global.token + "&h=" + string(global.hardcore) + "&a=" + string(achievid) + "&v=" + global.v, "POST", global.headers, "");
+    global.achieved = 1;
+}

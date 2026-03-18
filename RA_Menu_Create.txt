@@ -1,0 +1,16 @@
+global.gameid = ENTER YOUR GAME ID HERE;
+global.UserAgent= "ENTER YOUR USER AGENT HERE";
+nextroom=ENTER THE NAME OF THE ROOM AFTER THE CONNECTION SCREEN;
+proceed = 0;
+connection_success = 0;
+Select = 0;
+connection_error = 0;
+username = "";
+password = "";
+connect = 0;
+norepeats = 0;
+hasherror = 0;
+keyboard_string = "";
+connected = 0;
+started = 0;
+global.hardcore = 1;

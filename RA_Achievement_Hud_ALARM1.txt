@@ -1,0 +1,7 @@
+ENTER YOUR RICH PRESENCE HERE
+special_headers = ds_map_create();
+ds_map_copy(special_headers, global.headers);
+ds_map_add(special_headers, "Content-Type", "application/x-www-form-urlencoded");
+testid = http_request("https://stage.retroachievements.org/dorequest.php?r=ping&u=" + global.user + "&t=" + global.token + "&h=1&g=" + string(global.gameid), "POST", special_headers, "m=" + testatt);
+ds_map_destroy(special_headers);
+alarm[1] = 9000;

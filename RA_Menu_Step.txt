@@ -1,0 +1,70 @@
+if (keyboard_check_pressed(vk_down))
+{
+    keyboard_string = password;
+    Select = 1;
+}
+
+if (keyboard_check_pressed(vk_up))
+{
+    keyboard_string = username;
+    Select = 0;
+}
+
+if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(vk_right))
+    global.hardcore = 1 - global.hardcore;
+
+if (Select == 1)
+    password = keyboard_string;
+
+if (Select == 0)
+    username = keyboard_string;
+
+if (keyboard_check_pressed(vk_enter))
+{
+        connection_error = 0;
+        connect = 1;
+        global.headers = ds_map_create();
+        ds_map_add(global.headers, "User-Agent", UserAgent);
+        get_id = http_request("https://stage.retroachievements.org/dorequest.php?u=" + username + "&p=" + password + "&r=login2", "GET", global.headers, "");
+    }
+    else
+    {
+        hasherror = 1;
+    }
+}
+
+if (connected == 1 && norepeats == 0)
+{
+    if (ds_map_find_value(resultmap, "Success") == 1)
+    {
+        global.token = ds_map_find_value(resultmap, "Token");
+        global.user = ds_map_find_value(resultmap, "User");
+        startses_id = http_request("https://stage.retroachievements.org/dorequest.php?u=" + global.user + "&t=" + global.token + "&r=startsession" + "&g=" + string(global.gameid), "POST", global.headers, "");
+        norepeats = 1;
+    }
+    else
+    {
+        connected = 0;
+        connection_error = 1;
+        global.currentachievtitle = "A winner is you!";
+        global.currentachievtext = "Fail to connect to RetroAchievements.";
+        global.achieved = 1;
+    }
+}
+
+if (started == 1)
+{
+    if (ds_map_find_value(resultmap2, "Success") == 1)
+    {
+        HardcoreAchUnlocks = ds_map_find_value(resultmap2, "HardcoreUnlocks");
+        global.UnlockList = ds_list_create();
+        
+        for (i = 0; i < ds_list_size(HardcoreAchUnlocks); i += 1)
+            ds_list_add(global.UnlockList, ds_map_find_value(ds_list_find_value(HardcoreAchUnlocks, i), "ID"));
+        
+        ds_map_destroy(resultmap);
+        ds_map_destroy(resultmap2);
+        RA_Achievement_hud.alarm[1] = 1;
+        room_goto(room_intromenu);
+    }
+}

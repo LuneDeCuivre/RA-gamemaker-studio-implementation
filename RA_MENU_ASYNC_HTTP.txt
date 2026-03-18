@@ -1,0 +1,23 @@
+if (ds_map_find_value(async_load, "id") == get_id)
+{
+    if (ds_map_find_value(async_load, "status") == 0)
+    {
+        r_str = ds_map_find_value(async_load, "result");
+        resultmap = json_decode(string(r_str));
+        connected = 1;
+        connect = 0;
+    }
+}
+
+if (norepeats == 1)
+{
+    if (ds_map_find_value(async_load, "id") == startses_id)
+    {
+        if (ds_map_find_value(async_load, "status") == 0)
+        {
+            r_str = ds_map_find_value(async_load, "result");
+            resultmap2 = json_decode(string(r_str));
+            started = 1;
+        }
+    }
+}
