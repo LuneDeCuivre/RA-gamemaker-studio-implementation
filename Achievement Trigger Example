@@ -1,0 +1,4 @@
+achievtitle = "ACHIEVEMENT TITLE HERE";          
+achievtext = "ACHIEVEMENT DESCRIPTION HERE";
+achievid = "ACHIEVEMENT ID HERE";
+RA_achievement_trigger(achievtitle, achievtext, achievid);
