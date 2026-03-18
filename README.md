@@ -21,4 +21,4 @@ For each object, add the code in the folders to the matching category.
 
 Fill in the information in RA_MENU_CREATE.
 
-Congrats! You're done! Now just the "easy" part of coding all the achievements. To make the user code an achievement, use the achievement trigger example.
+Congrats! You're done! Now just the "easy" part of coding all the achievements. To make the user unlock an achievement, use the achievement trigger example.
