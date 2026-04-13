@@ -8,7 +8,7 @@ First, you should go to the room list and locate one of the rooms at the start (
 
 There will be in one of the objects in it's code a room_goto_next() or a room_goto(roomnamehere). You should create a room called "RA_connect".
 
-Then, replace the room_goto with room_goto(RAconnect). 
+Then, replace the room_goto with room_goto(RA_connect). 
 
 
 Add a script called RA_achievement_trigger and copy and paste the code given. 
