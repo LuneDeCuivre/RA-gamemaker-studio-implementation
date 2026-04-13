@@ -26,11 +26,6 @@ if (keyboard_check_pressed(vk_enter))
         global.headers = ds_map_create();
         ds_map_add(global.headers, "User-Agent", UserAgent);
         get_id = http_request("https://stage.retroachievements.org/dorequest.php?u=" + username + "&p=" + password + "&r=login2", "GET", global.headers, "");
-    }
-    else
-    {
-        hasherror = 1;
-    }
 }
 
 if (connected == 1 && norepeats == 0)
