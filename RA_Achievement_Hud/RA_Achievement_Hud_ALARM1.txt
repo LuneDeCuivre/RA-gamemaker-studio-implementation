@@ -1,4 +1,4 @@
-testatt="ENTER YOUR RICH PRESENCE HERE"
+testatt="STOCK RICH PRESENCE"
 special_headers = ds_map_create();
 ds_map_copy(special_headers, global.headers);
 ds_map_add(special_headers, "Content-Type", "application/x-www-form-urlencoded");
