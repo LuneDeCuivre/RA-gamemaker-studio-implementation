@@ -1,5 +1,5 @@
 global.gameid = ENTER YOUR GAME ID HERE;
-global.UserAgent= "ENTER YOUR USER AGENT HERE";
+UserAgent= "ENTER YOUR USER AGENT HERE";
 nextroom=ENTER THE NAME OF THE ROOM AFTER THE CONNECTION SCREEN;
 proceed = 0;
 connection_success = 0;
