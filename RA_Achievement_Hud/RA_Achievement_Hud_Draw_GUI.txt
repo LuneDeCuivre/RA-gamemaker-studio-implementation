@@ -2,7 +2,6 @@ draw_set_colour(c_black);
 draw_rectangle(global.achievposx - 10, global.achievposy - 10, global.achievposx + 350, global.achievposy + 45, false);
 draw_set_colour(c_white);
 draw_rectangle(global.achievposx - 10, global.achievposy - 10, global.achievposx + 350, global.achievposy + 45, true);
-scr_setfont(fnt_maintext);
 draw_text(global.achievposx, global.achievposy, global.currentachievtitle);
 draw_set_colour(c_gray);
 draw_text(global.achievposx, global.achievposy + 20, global.currentachievtext);
