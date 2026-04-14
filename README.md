@@ -15,9 +15,9 @@ Add a script called RA_achievement_trigger and copy and paste the code given.
 
 
 Create the objects RA_achievement_hud (set this one as persistent) and RA_MENU. 
-Put RA_Achievement_Hud in the starter screen and RA_MENU in the RA_connect room. 
+Put RA_Achievement_Hud in the starter screen and RA_MENU in the RA_connect room. (Drag them from the object list on the left into the room's image on the right. Some games may not let you do this and you'll have to create the object using instance_create_layer).
 
-For each object, add the code in the folders to the matching category.
+For each object, add the code in the folders to the matching category. (HTTP ASYNC is in the "other" section. There is a dropdown menu there.)
 
 Fill in the information in RA_MENU_CREATE.
 
