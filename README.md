@@ -19,6 +19,6 @@ Put RA_Achievement_Hud in the starter screen and RA_MENU in the RA_connect room.
 
 For each object, add the code in the folders to the matching category. (HTTP ASYNC is in the "other" section. There is a dropdown menu there.)
 
-Fill in the information in RA_MENU_CREATE.
+Fill in the information in RA_MENU_CREATE. You will also have to edit the code in RA_Achievement_Hud_ALARM1 to make a rich presence.
 
 Congrats! You're done! Now just the "easy" part of coding all the achievements. To make the user unlock an achievement, use the achievement trigger example.
