@@ -60,6 +60,6 @@ if (started == 1)
         ds_map_destroy(resultmap);
         ds_map_destroy(resultmap2);
         RA_Achievement_hud.alarm[1] = 1;
-        room_goto(room_intromenu);
+        room_goto(nextroom);
     }
 }
